@@ -1,6 +1,5 @@
 import HeaderController from 'discourse/controllers/header';
 import HeaderView from 'discourse/views/header';
-import ApplicationView from 'discourse/views/application';
 
 export default {
   name: 'extend-for-twitter',
@@ -13,25 +12,25 @@ export default {
       widgetCode: function () {
         return this.siteSettings.twitter_widget_code;
       }.property(),
+
+      widgetVisible: false,
+
+      actions: {
+        toggleTwitter: function () {
+          this.toggleProperty('widgetVisible');
+          this.appEvents.trigger('dropdowns:closeAll');
+        },
+
+        toggleSearch: function () {
+          this._super();
+          if (this.get('widgetVisible')) {
+            this.set('widgetVisible', false);
+          }
+        },
+      }
     });
 
     HeaderView.reopen({
-      //didInsertElement: function () {
-      //  var script = window.document.createElement('script');
-      //  script.id = 'twitter-script';
-      //  script.src = '//platform.twitter.com/widgets.js';
-      //  script.charset = 'utf-8';
-      //  window.$('body').append(script);
-      //},
-
-      //WillDestroyElement: function () {
-      //  window.$('#twitter-script', 'body').remove();
-      //}
-
-      //didInsertElement: function () {
-      //
-      //}
-
       twitterWidgetScript: function () {
         window.twttr = (function (d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0],
