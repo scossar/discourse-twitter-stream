@@ -1,0 +1,7 @@
+plugins:
+  twitter_enabled:
+    default: true
+    client: true
+  twitter_widget_code:
+    default: ''
+    client: true

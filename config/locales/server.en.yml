@@ -1,0 +1,4 @@
+en:
+  site_settings:
+    twitter_enabled: "Enable the twitter plugin?"
+    twitter_widget_code: "Copy and paste your twitter widget code here."
