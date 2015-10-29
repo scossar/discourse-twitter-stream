@@ -13,20 +13,20 @@ export default {
         return this.siteSettings.twitter_widget_code;
       }.property(),
 
-      widgetVisible: false,
+      twitterVisible: false,
 
       actions: {
-        toggleTwitter: function () {
-          this.toggleProperty('widgetVisible');
-          this.appEvents.trigger('dropdowns:closeAll');
-        },
+        //toggleTwitter: function () {
+        //  this.toggleProperty('widgetVisible');
+        //  this.appEvents.trigger('dropdowns:closeAll');
+        //},
 
-        toggleSearch: function () {
-          this._super();
-          if (this.get('widgetVisible')) {
-            this.set('widgetVisible', false);
-          }
-        },
+        //toggleSearch: function () {
+        //  this._super();
+        //  if (this.get('widgetVisible')) {
+        //    this.set('widgetVisible', false);
+        //  }
+        //},
       }
     });
 
