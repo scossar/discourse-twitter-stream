@@ -1,6 +1,7 @@
 import HeaderController from 'discourse/controllers/header';
 import HeaderView from 'discourse/views/header';
 import ApplicationView from 'discourse/views/application';
+import HeaderDropdown from 'discourse/components/header-dropdown';
 
 export default {
   name: 'extend-for-twitter',
@@ -20,11 +21,12 @@ export default {
       actions: {
         toggleTwitter: function () {
           let twitterVisible = this.get('twitterVisible');
+          console.log('twitter visible', twitterVisible);
           if (!twitterVisible) {
             window.twttr = (function (d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0],
                 t = window.twttr || {};
-              if (d.getElementById(id)) return t;
+              //if (d.getElementById(id)) return t;
               js = d.createElement(s);
               js.id = id;
               js.src = "https://platform.twitter.com/widgets.js";
@@ -39,13 +41,22 @@ export default {
             }(document, "script", "twitter-wjs"));
           } else {
             // remove the script
-            Ember.$('#twitter-wjs', 'head').remove();
+            //Ember.$('#twitter-wjs', 'head').remove();
           }
           this.toggleProperty('twitterVisible');
           this.appEvents.trigger('dropdowns:closeAll');
         },
       }
 
+    });
+
+    HeaderDropdown.reopen({
+      actions: {
+        toggle() {
+          Ember.$('#twitter-wjs', 'head').remove();
+          this._super();
+        }
+      }
     });
 
     HeaderView.reopen({
