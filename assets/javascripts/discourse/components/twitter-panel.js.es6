@@ -1,3 +1,4 @@
 export default Ember.Component.extend({
-  classNames: ['twitter-panel']
+  classNames: ['twitter-panel'],
+
 });
