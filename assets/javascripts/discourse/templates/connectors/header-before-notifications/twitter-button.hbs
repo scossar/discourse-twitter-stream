@@ -1,7 +1,10 @@
-{{#header-dropdown
-iconId="toggle-twitter-panel"
-icon="twitter"
-tagName="div"
-action="toggleTwitter"
-toggleVisible=twitterVisible}}
-{{/header-dropdown}}
+{{#if twitterEnabled}}
+  {{#header-dropdown
+  iconId="toggle-twitter-panel"
+  icon="twitter"
+  tagName="div"
+  action="toggleTwitter"
+  title="twitter_dropdown"
+  toggleVisible=twitterVisible}}
+  {{/header-dropdown}}
+{{/if}}

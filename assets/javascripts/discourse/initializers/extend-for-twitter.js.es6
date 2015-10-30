@@ -10,7 +10,6 @@ export default {
       }.property(),
 
       widgetCode: function () {
-        console.log('returning widget link');
         return this.siteSettings.twitter_widget_code;
       }.property(),
 

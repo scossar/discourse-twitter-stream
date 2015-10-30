@@ -1,3 +1,5 @@
 {{#menu-panel visible=visible maxWidth=366}}
   {{{widgetCode}}}
+  {{#conditional-loading-spinner condition=loadingTweets containerClass="spinner-container"}}
+  {{/conditional-loading-spinner}}
 {{/menu-panel}}
