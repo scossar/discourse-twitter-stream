@@ -12,7 +12,7 @@ Follow the [Install a Plugin](https://meta.discourse.org/t/install-a-plugin/1915
 ### Use
 
 To use this plugin you must first create a 'widget' through your Twitter account.
-To do that, first click on your Twitter profile picture. From there select 'settings'.
+To do that, first click on your Twitter profile picture. From the drop-down menu select 'settings'.
 In the settings drop-down menu select 'widgets'. On the widgets page click on 'create new'.
 
 On the 'create new' page, in order to create a widget that will give you a Twitter stream for
