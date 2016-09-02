@@ -1,5 +1,7 @@
 ## Discourse Twitter Stream
 
+*note: This plugin is broken. It has not been updated to use the Discourse plugin api. This is example code only.*
+
 This plugin is for adding a Twitter stream to your Discourse forum.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/2975917/10836337/860d47e2-7e69-11e5-92a0-e00992d0939d.png)
